@@ -182,12 +182,11 @@ def check_connection_bb84(pad_length = int, is_eve_eavesdropping = bool, error_t
     print(bob_good_bits)
     accuracy = float(num_good_bits) / (float)(len(alice_good_bits))
     print("accuracy = ", accuracy)
-    print("error = ", 1.0 - accuracy)
     
     if (accuracy < error_threshold):
         print("Accuracy is below error threshold. Check that connection is secure or try again.")
     else:
-        print("Accuracy is at or below threshold. Connection is valid.")
+        print("Accuracy is at or below threshold. Connection is valid, can use Bob or Alice's good base bits as a key.")
 
     return None
 
